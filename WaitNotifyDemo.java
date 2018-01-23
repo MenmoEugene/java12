@@ -31,6 +31,10 @@ class Input implements Runnable
 				{
 					r.name="ÂþÀò";
 					r.sex="Å®";
+				}else
+				{
+					r.name="menmo";
+					r.sex="male";
 				}
 				x = (x+1)%2;
 				r.flag =true;
@@ -56,7 +60,7 @@ class Output implements Runnable
 				if(!r.flag)
 					try{r.wait();}catch(Exception e){}
 				System.out.println(r.name+"---"+r.sex);
-				r.flag = false();
+				r.flag = false;
 				r.notify();
 			}
 		}
